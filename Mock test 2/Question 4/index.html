@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        nav{
+            display: flex;
+            justify-content: end;
+            height: 10vh;
+            background-color: gray;
+            align-items: center;
+            padding: 20px 30px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        label{
+            font-weight: 900;
+            font-size: 30px;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+        }
+        li{
+            cursor: pointer;
+        }
+        span{
+            display: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 768px){
+         
+        span{
+            display: block;
+         }
+         ul{
+            display: none;
+         }
+         ul.show{
+            display: block;
+         } 
+         nav{
+            height: fit-content;
+         }
+         
+        }   
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <!-- <label for="logo"> Logo</label> -->
+        
+        <ul> 
+            <li>Home</li>
+            <li>About</li>
+            <li>Cotact</li>
+            <li>Services</li>
+            
+        </ul>
+        <span>&#9776;</span>
+    </nav>
+    
+    <script>
+        //  function myfunction(){
+        //     let list = document.getElementsByTagName("ul");
+        //     if(list.style.display == "block"){
+        //         list.style.display = "none"
+        //     }
+        //     else{
+        //         list.style.display = "block"
+        //     }
+
+        //  }
+        const h = document.getElementsByTagName("span");
+        const n = document.getElementsByTagName("ul");
+        h.addEventListener("click", function(){
+            n.classList.toggle("show");
+        })
+
+    </script>
+</body>
+</html>
