@@ -1,4 +1,4 @@
-const questionss = [
+const questions = [
     {
         question:"Which is largest animal in the world",
         answers:[
@@ -47,7 +47,7 @@ const questionss = [
 ];
 
 const ques = document.getElementById("que");
-const button = document.getElementsByClassName("abtn");
+const buttons = document.getElementsByClassName("btns");
 const next = document.getElementsByClassName("nbtn");
 
 let currentque = 0;
@@ -61,16 +61,16 @@ function startQuiz (){
 }
 
 function showQue(){
-    let ques = questionss[currentque];
+    let ques = questions[currentque];
     let queNo = currentque + 1;
     ques.innerHTML = queNo + "." + currentque.question;
 
-    currentque.answers.forEach(answers => {
+    currentque.answers.forEach(answer => {
         
         const bt = document.childElement("button");
         bt.innerHTML = answers.text
         bt.classList.add ("btn");
-        button.appendChild (bt) ;
+        buttons.appendChild (bt) ;
     });
 
 }
